@@ -1,0 +1,13 @@
+x = list(map(int,input('Enter the numbers').split(",")))
+#print(x)
+#print(len(x))
+i = 0
+j = []
+for i in range(len(x)):
+    if x[i] >= 0:
+        j.append(x[i])
+        i =+1
+    else:
+        i =+1
+print(j)
+
