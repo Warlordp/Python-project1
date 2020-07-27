@@ -1,0 +1,34 @@
+instring = input("Enter a String:")
+instring = instring.lower()
+mydict = {
+}
+mylist = []
+mylist2 = []
+i = ""
+c = 0
+j = 0
+x = 0
+def increment(var):
+    var =+ 1
+def dict_add(i,c):
+    mydict[i] = c
+
+for j in range(len (instring)):
+    if instring[j] in mylist:
+        increment(j)
+    else:
+        mylist.append(instring[j])
+        increment(j)
+#print(mylist)
+for x in range(len(mylist)):
+    instances = instring.count(mylist[x])
+    mylist2.append(instances)
+    increment(x)
+#print(mylist2)
+k = 0
+for k in range(len(mylist)):
+    dict_add(mylist[k],mylist2[k])
+    increment(k)
+sorting = sorted(mydict.items(),key=lambda x:x[1],reverse= 1)
+for i in sorting:
+    print(i[0],i[1])
